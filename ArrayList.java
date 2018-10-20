@@ -22,11 +22,17 @@ public class ArrayList implements List {
 		if(size == arr.length) {
 			growArray();
 		}
-		for(int i = size-1; i > pos; i--) {
-			arr[i+1] = arr[i];
+		// for(int i = size-1; i > pos; i--) {
+		// 	arr[i+1] = arr[i];
+		// }
+		// arr[pos] = obj;
+		// size++;
+
+		for(int i = pos; i < size; i++) {
+			arr[i + 1] = arr[i];
 		}
 		arr[pos] = obj;
-		size++;
+		size++;		
 	}
 
 	public Object get(int pos) {
